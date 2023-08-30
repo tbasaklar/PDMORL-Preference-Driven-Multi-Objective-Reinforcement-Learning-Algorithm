@@ -1,0 +1,6 @@
+setup.py
+moenvs.egg-info/PKG-INFO
+moenvs.egg-info/SOURCES.txt
+moenvs.egg-info/dependency_links.txt
+moenvs.egg-info/requires.txt
+moenvs.egg-info/top_level.txt
