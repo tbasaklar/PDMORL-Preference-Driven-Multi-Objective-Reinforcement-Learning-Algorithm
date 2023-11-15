@@ -1,6 +1,6 @@
 # PD-MORL
 
-This codebase contains the implementation for the paper [PD-MORL: Preference-Driven Multi-Objective Reinforcement Learning Algorithm] (https://openreview.net/forum?id=zS9sRyaPFlJ) (**ICLR 2023**). 
+This codebase contains the implementation for the paper [PD-MORL: Preference-Driven Multi-Objective Reinforcement Learning Algorithm] (<https://openreview.net/forum?id=zS9sRyaPFlJ>) (**ICLR 2023**). 
 
 In this paper, we propose a novel preference-driven multi-objective reinforcement learning algorithm using a single policy network that covers the entire preference space in a given domain.
 
