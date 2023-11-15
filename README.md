@@ -38,7 +38,7 @@ pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f htt
 All training and evaluation-related codes are in the folder `PD-MORL`. We also provide some common utilities and environments in the `lib` folder. We follow a similar structure to [PTAN](<https://github.com/Shmuma/ptan>) in our codebase for readibility and simplicity.
 
 #### MORL Benchmarks
-We evaluate PD-MORL's performance on two commonly used discrete MORL benchmarks: Deep Sea Treasure and Fruit Tree Navigation. For these benchmarks, we use the implementation of [1](<https://github.com/RunzheYang/MORL>). We also evaluate its performance on multi-objective continuous control tasks such as MO-Walker2d-v2, MO-HalfCheetah-v2, MO-Ant-v2, MO-Swimmer-v2, and MO-Hopper-v2. For these benchmarks, we use the implementation of [2](<https://github.com/mit-gfx/PGMORL>).
+We evaluate PD-MORL's performance on two commonly used discrete MORL benchmarks: Deep Sea Treasure and Fruit Tree Navigation. For these benchmarks, we use the implementation of [https://github.com/RunzheYang/MORL](<https://github.com/RunzheYang/MORL>). We also evaluate its performance on multi-objective continuous control tasks such as MO-Walker2d-v2, MO-HalfCheetah-v2, MO-Ant-v2, MO-Swimmer-v2, and MO-Hopper-v2. For these benchmarks, we use the implementation of [https://github.com/mit-gfx/PGMORL](<https://github.com/mit-gfx/PGMORL>).
 
 The code for the environments can be found in `lib/utilities/morl/moenvs` folder. You should register these environments as a gym environment by:
 
