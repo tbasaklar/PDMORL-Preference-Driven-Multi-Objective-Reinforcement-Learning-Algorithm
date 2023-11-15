@@ -25,29 +25,29 @@ For conda virtual env installation, simply create a virtual env named **pdmorl**
 conda env create -f environment.yml
 ```
 
-If you prefer to do it manually, you could just simply open the `environment.yml` in editor to install packages using `pip`.
+If you prefer to do it manually, you could just simply open the `environment.yml` in the editor to install packages using `pip`.
 
 You still need to satisfy the Prerequisites.
-For example, to install pytorch 1.8.1 with cuda 11.1 toolkit, simply run the following command 
+For example, to install pytorch 1.8.1 with the cuda 11.1 toolkit, simply run the following command 
 ```
 pip install torch==1.8.1+cu111 torchvision==0.9.1+cu111 torchaudio==0.8.1 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ## Repo Details
 
-All training and evaluation related codes are in the folder `PD-MORL`. We also provide some common utilities and environments in the `lib` folder. We follow a similar structure to [PTAN](<https://github.com/Shmuma/ptan>) in our codebase for readibility and simplicity.
+All training and evaluation-related codes are in the folder `PD-MORL`. We also provide some common utilities and environments in the `lib` folder. We follow a similar structure to [PTAN](<https://github.com/Shmuma/ptan>) in our codebase for readibility and simplicity.
 
 #### MORL Benchmarks
 We evaluate PD-MORL's performance on two commonly used discrete MORL benchmarks: Deep Sea Treasure and Fruit Tree Navigation. For these benchmarks, we use the implementation of [1](<https://github.com/RunzheYang/MORL>). We also evaluate its performance on multi-objective continuous control tasks such as MO-Walker2d-v2, MO-HalfCheetah-v2, MO-Ant-v2, MO-Swimmer-v2, and MO-Hopper-v2. For these benchmarks, we use the implementation of [2](<https://github.com/mit-gfx/PGMORL>).
 
-The code for the environments code can be found in `lib/utilities/morl/moenvs` folder. You should register these environments as a gym environment by:
+The code for the environments can be found in `lib/utilities/morl/moenvs` folder. You should register these environments as a gym environment by:
 
 ```
 cd ../lib/utilities/morl/MOEnvs
 pip install -e .
 ```
 
-Additionally, you need to comment out the following line 21 in this gym script `home/[user_id]/.conda/envs/[env_name]/lib/python[version]/site-packages/gym/wrappers/time_limit.py`:
+Additionally, if needed, you may comment out the following line 21 in this gym script `home/[user_id]/.conda/envs/[env_name]/lib/python[version]/site-packages/gym/wrappers/time_limit.py`:
 ```
 # info["TimeLimit.truncated"] = not done
 ```
@@ -73,8 +73,8 @@ You can also find precomputed Pareto front solutions  in `PD-MORL` as `objs_pdmo
 
 #### Training
 
-We provide configuration of hyperparameters for each benchmark in `lib/utilities/settings.py`. You can modify these hyperparameters according to your needs.
-We provide a training script in `PD-MORL` folder for each benchmark. For instance, for the MO-Ant-v2 problem, you can simply run the following command to start training:
+We provide a configuration of hyperparameters for each benchmark in `lib/utilities/settings.py`. You can modify these hyperparameters according to your needs.
+We provide a training script in the `PD-MORL` folder for each benchmark. For instance, for the MO-Ant-v2 problem, you can run the following command to start training:
 
 ```
 cd PD-MORL
@@ -86,7 +86,7 @@ By default, the models are stored in `Exps/[problem_algorithm name]` during trai
 
 #### Computational Resource
 
-We run all our experiments on a local server including Intel Xeon Gold 6242R @4.1GHz and 385 GB memory. We do not use any GPU in our implementation. 
+We run all our experiments on a local server, including Intel Xeon Gold 6242R @4.1GHz and 385 GB memory. We do not use any GPU in our implementation. 
 
 ## Citation
 
